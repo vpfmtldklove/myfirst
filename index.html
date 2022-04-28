@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css" integrity="sha512-6c4nX2tn5KbzeBJo9Ywpa0Gkt+mzCzJBrE1RB6fmpcsoN+b/w/euwIMuQKNyUoU/nToKN3a8SgNOtPrbW12fug==" crossorigin="anonymous" />
+    <title>portfolio</title>
+</head>
+<style>
+    @media (max-width: 600px) {
+        body {
+            background-color: lightblue;
+        }
+        a {
+            font-size: 20px;
+        }
+        .sidebarslider {
+            display: none;
+        }
+        .sidebar {
+            display: none;
+        }
+        /* .fullscreen-menu {
+            display: none;
+        } */
+        /* #toggle:checked + .fullscreen-menu{display: inline;}  */
+        /* #toggle {
+            display: block;
+        } */
+        /* .fullscreen-menu {} */
+            
+    }
+    
+    @media (min-width: 600px) {
+        /* #toggle {
+            display: none;
+        } */
+    }
+
+    * {
+        width: device-width;
+    }
+    html {
+        scroll-behavior: smooth;
+        font-family: 'Secular One', sans-serif;
+    }
+    #header {
+        background-color: black;
+        padding: 10px;
+    }
+
+    footer {
+       background-color: #2c0808;
+       width: 100%;
+       height: 100px;
+       color: white;
+       text-align: center;
+       padding-top: 10px;
+    }
+    footer a {
+        text-decoration: none;
+        color: white;
+    }
+
+    /* 메뉴(텍스트 창 이미지 모두포함) */
+    .fullscreen {
+        background-color: black;
+        padding: 50px;
+        font-size: 35px;
+        margin-top: 5px;
+        
+    }
+    /* 메뉴텍스트만 정렬 */
+    .fullscreen-menu{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        display: inline;
+    }
+    .fullscreen a {
+        color: white;
+        padding: 20px;
+        text-decoration: none;
+    } 
+    #toggle {display: none;}
+    #toggle:checked + .fullscreen-menu{display: inline;} 
+    
+
+    /* 메뉴하단 전체 */
+    .Allcontainer {        
+        display: flex;
+    }
+    .sidebar {
+        background-color: darkolivegreen;
+        width: 10%;
+        /* float: left; */
+        /* width: 200px; */
+        /* height: 600px; */
+        /* margin-top: 5px; */
+        /* position: fixed; */
+        /* overflow: visible; */
+    }
+    .sidebarslider {
+        position: fixed;
+        transform: translate(-50%, 0%);
+        left: 5%;
+        top: 30%;
+        
+    }
+    #sidebarul {
+        list-style: none;
+        font-size: 2vw;
+        padding-left: 0;
+        
+        
+    }
+    .list {
+        width: 120%;
+        padding-top: 20%;
+        padding-bottom: 30%;
+       
+        
+    }
+    .list a {
+        color: wheat;
+        text-decoration: none;
+    }
+
+    /* 메뉴하단 오른쪽 전체 */
+    .rightcontainer {
+        flex-grow: 1;
+        left: 10%;
+    }
+    .main {
+        background-color: white;
+        width: 100%;
+        height: 600px;
+        /* position: relative; */
+    }
+    .maintext {
+        background-color: #2c0808;
+        height: 120px;
+        width: 50%;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        top: 50%;
+        font-size: 3.5vw;
+        font-weight: 100;
+        text-align: center; 
+        color: white;
+        border: 2px solid gray;
+        padding-top: 20px;
+        
+    }
+    .mainimg {
+        border: 1px  gray;
+        width: 40%;
+        height: 400px;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 70%;
+        top: 30%;
+    }
+
+    /* about */
+    .main1 {        
+        height: 600px; 
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;        
+        /* flex가 크기에 반응해서 밑으로 내려감 */
+        /* flex-wrap: wrap; */
+    }
+    .item {
+        width: 50%;
+        background-color: beige;
+        flex-grow: 1;
+        border-right: 1px dotted black;
+    }
+    .item:nth-child(1) {
+        flex-grow: 5;            
+    }
+    .item:nth-child(2) {
+        flex-grow: 1; 
+        width: 30%;
+        display: block; 
+        flex-direction: column;
+    }
+    .inneritem {
+        text-align: center;
+        background-color: beige;
+        flex-grow: 1;
+        border-bottom: 1px  black;
+    }
+    .about-box {
+        position: relative;
+        height: 40%;
+        display: flex;
+        width: 40%;
+        margin: 20px;
+    }
+    .about-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+    }
+    .about-img:hover {
+        width: 400px;
+        transform: scale(1.5);
+    }
+    .me {
+        padding-top: 20px;
+        color: lightcoral;
+        font-size: 30px;
+    }
+    .imagePosition {
+        box-sizing: border-box;
+        margin-top: 20px;
+        margin-left: 50px;
+        border-radius: 100%;
+        width: 50%;
+    
+    }
+    .profile {
+        text-align: left;
+        margin: 50px;
+        font-size: 20px;
+    }
+    
+
+    /* project */
+    .main2 {
+        background-color: #fafafa;
+        text-align: center;
+        padding: 100px;
+        padding-top: 0;
+        margin-top: 20px;
+    }
+    .box1 {
+        height: 200px;
+        display: flex;
+        width: 100%;
+        margin: 20px;
+        
+    }
+    .first {
+        background-color: antiquewhite;
+        border: 1px solid;
+        float: left;
+        box-sizing: border-box;
+        flex: 1;
+        
+    }
+    .second {
+        background-color: antiquewhite;
+        border: 1px solid;
+        float: left;
+        box-sizing: border-box;
+        flex: 1;
+        margin-left: 20px;
+        
+    }
+    .third {
+        background-color: antiquewhite;
+        border: 1px solid;
+        float: right;
+        box-sizing: border-box;
+        flex: 1;
+        margin-left: 20px;
+    }
+   .first1 {
+       margin-top: 20px;
+   }
+
+   /* contact */
+   .container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+   }
+    input[type=submit] {
+        background-color: #2c0808;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type=text] , textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+    }
+    /* #topbtn {
+        position: fixed;
+        bottom: 45px;
+        left: 50%;
+        margin-left: 310px;
+        width: 60px;
+        height: 47px;
+        text-align: center;
+        font-size: 13px;
+        color: rosybrown;
+        transition: all 200ms ease-out;
+        display: inline-block;
+        z-index: 10;
+    } */
+    /* #topbtn ::after {
+        width: 50%;
+        height: 50%;
+        cursor: pointer;
+    } */
+    
+    /* .dropbtn {
+        position: fixed;
+        top: 15%;
+        right: 3%;
+        width: 10%;
+        color: white;
+        cursor: pointer;
+    } */
+    
+
+
+</style>
+
+<body>
+    <div id="header">
+        <input type="text" style="width: 300px; position: relative; left: 30px;">  
+    </div>   
+
+    <div class="fullscreen">
+        <button type="button"><label for="toggle">&#8801;</label></button>
+        <input type="chekbox" id="toggle">
+            <nav class="fullscreen-menu">
+                <a href="#home">Home</a>  
+                <a href="#about">About</a>
+                <a href="#project">project</a>
+                <a href="#contact">Contact</a>
+            </nav> 
+    </div>
+
+    <div class="Allcontainer">
+        <div class="sidebar">
+            <div class="sidebarslider">
+                <ul id='sidebarul'>
+                    <li class="list"><a href="#home">Home</a></li>
+                    <li class="list"><a href="#about">About</a></li>
+                    <li class="list"><a href="#project">project</a></li>
+                    <li class="list"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="rightcontainer">
+            <div id="home" class="main">     
+                <div class='mainimg'>
+                    <img class="img-main" src="./pawel-czerwinski--ntEOqHPjpI-unsplash.jpg" width="100%">
+                </div> 
+                <div class='maintext'>Welcome My portfolio</div>
+            </div>
+            
+            <div id="about" class="main1">
+                <div class="item">
+                    <div class="about-box">
+                        <div class="first">
+                            <div class="first1">
+                                <img class="about-img" src="./3.png">
+                                <img class="about-img" src="./images.png" style="left: 120%;">
+                                <img class="about-img" src="./1.jpg" style="top: 130%;">
+                                <img class="about-img" src="./2.jpg" style="top: 130%; left: 120%;">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div class="inneritem">
+                        <p class="me">ABOUT ME</p>
+                        <img class="imagePosition" src="./다운로드 (5).jpg">
+                    </div>
+                    <div class="profile">
+                        <ul>
+                            <li>이름 : 조민선</li>
+                            <li>나이 : 32</li>
+                            <li>MBTI : INFP</li>
+                            <li>favorite: tv, 여행..</li>
+                        </ul>  
+                    </div>
+                </div>
+            </div> 
+
+            <div id="project" class="main2">
+                <div class="item2">
+                    <h2>project</h2>
+                    <span>Odio turpis amet sed consequat eget posuere consequat.</span>
+                </div>
+                <div class="box1">
+                    <div class="first">
+                        <div class="first1">
+                        <img src="./자산 8.png" alt="">
+                        </div>
+                    </div>
+                    <div class="second">
+                        <div class="first1">
+                            <img src="./자산 8.png" alt="">
+                            </div>
+                    </div>
+                    <div class="third">
+                        <div class="first1">
+                            <img src="./자산 8.png" alt="">
+                            </div>
+                    </div>
+                </div>
+                <div class="box1">
+                    <div class="first">
+                        <div class="first1">
+                        <img src="./자산 8.png" alt="">
+                        </div>
+                    </div>
+                    <div class="second">
+                        <div class="first1">
+                            <img src="./자산 8.png" alt="">
+                            </div>
+                    </div>
+                    <div class="third">
+                        <div class="first1">
+                            <img src="./자산 8.png" alt="">
+                            </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div id="contact" class="container">
+                <form action="/action_page.php">
+                    <fieldset>
+                        <legend>contact</legend>
+                            <label for="fname">First Name</label>
+                            <input type="text" name="firstname">
+
+                            <label for="lname">Last Name</label>
+                            <input type="text" name="lastname">
+
+                            <label for="mail">email</label>
+                            <input type="text" name="email">
+
+                            <label for="subject">Subject</label>
+                            <textarea name="subject" cols="20" rows="5"></textarea>
+                
+                        <input type="submit" value="submit">
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="topbtn">
+        <span class="icons8"><i class="fa-solid fa-arrow-up-long"></i></span>
+    </div> -->
+
+    <footer>
+        <p>Copyrightⓒ2022 All rights reserved.</p>
+        <p><a href="vpfmtldklove@gmail.com">vpfmtldklove@gmail.com</a></p>
+    </footer>
+
+    
+</body>
+</html>
+
+<script>
+// const mobileWidth = 640; // 쪼그라들기 시작할 시점
+// React.useEffect(() => {
+//   const onResize = () => {
+//     const zoom = Math.min(window.innerWidth / mobileWidth, 1);
+//     document.documentElement.style.zoom = `${zoom}`;
+//   };
+//   onResize();
+//   window.addEventListener('resize', onResize);
+//   return () => window.removeEventListener('resize', onResize);
+// }, []);
+
+</script>
+
