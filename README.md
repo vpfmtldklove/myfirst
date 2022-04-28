@@ -6,4 +6,4 @@
 - 포트폴리오
 - 하나둘짱
 
-여기는 설명 되는건지 테스트
+https://github.com/vpfmtldklove/myfirst
