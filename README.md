@@ -8,8 +8,4 @@
 
 
 
-
-
-https://github.com/vpfmtldklove/myfirst/blob/master/index.html
-
-http://localhost/myfirst/index.html
+https://vpfmtldklove.github.io/myfirst/
