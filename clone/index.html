@@ -8,7 +8,7 @@
 </head>
 <style>
     /* max-width: ;  */
-    /* @media (min-width: 1024px) {
+    @media (min-width: 1024px) {
         .navigation-bar_content {
         padding: 10px 60px;
     }
@@ -19,15 +19,16 @@
 
         }
         .navigation-bar_left1 {
-            position: static;
+            /* position: static; */
             margin-right: 35px;
             transform: none;
         }
-    } */
+    }
 
     .laylot {
         display: flex;
         flex-direction: column;
+        /* flex-wrap: wrap; */
         /* align-items: stretch; */
     }
     .laylot > * { outline: 1px dotted #4f80ff; }
@@ -35,16 +36,36 @@
     html {
         background-color: #fff;
     }
+
+    .top-banner {
+        background-color: #4f80ff;
+    }
+    .top-banner_pc {
+        font-size: 20px;
+        text-align: center;
+        padding: 20px;
+    }
+    .top-banner_bt {
+        float: right;
+    }
+    .navigation-bar {
+        /* justify-content: space-around; */
+        
+    }
     .navigation-bar_content {
         display: flex;
+        Position: sticky;
+        justify-content : center 
     }
     .navigation-bar_rigth {
         display: flex;
-        padding: 20px;
+        /* padding: 20px; */
+        position: relative;
     }
     .navigation-bar_rigth_shpping {
         display: block;
-        padding: 20px;
+        /* padding: 20px; */
+        /* position: relative; */
     }
     .navigation-bar_rigth_shpping a {
         text-decoration: none;
@@ -65,13 +86,145 @@
         font-size: 18px;
     }
     
+    .row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 500px;
+        background-color: yellow;
+    }
+    .row1 {
+        /* padding-top: 30px; */
+        width: 60%;
+        background-color: blue;
+        margin: 10px;
+        float: left;
+        
+    }
+    .row2 {
+        /* padding-top: 30px; */
+        width: 40%;
+        background-color: red;
+        margin: 10px;
+        float: right;
+        
+    }
+    .container_menu {
+        width: 100%;
+        background-color: #4f80ff;
+        height: 100px;
+    }
+    .menu_list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .container_store {
+        background-color: palevioletred;
+        display: flex;
+        width: 100%;
+        height: 300px;
+        flex-direction: row;
+    }
+    .store_br {
+        background-color: aqua;
+        width: 60%;
+        margin: 10px;
+        float: left;
+        display: flex;
+        flex-direction: row;
+    }
+    .store_br2 {
+        width: 40%;
+        background-color: green;
+        margin: 10px;
+        float: right;
+    }
+    .br1, .br2, .br3 {
+        background-color: gray;
+        width: 35%;
+        height: 150px;
+        margin: 10px;
+        
+    }
+    .br1_list, .br2_list, .br3_list {
+        background-color: yellow;
+        list-style: none;
+        position: relative;
+        top: 100%;
+    }
+    .br2_menu1 {
+        background-color: gray;
+        /* display: flex; */
+        border-radius: 5px;
+        border-bottom: dotted;
+        height: 30%;
+        margin: 5px;
+        text-align: center;
+        
+    }
+    .br2_menu1 a {
+        text-decoration: none;
+        position: relative;
+        top: 30%;
+    }
+    .container_category {
+        background-color: blue;
+        width: 100%;
+        height: 200px;
+    }
+    .category_list {
+        background-color: gold;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10%;
+    }
+    .dill_list {
+        background-color: aquamarine;
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .dill_list1, .dill_list2, .dill_list3 {
+        background-color: gray;
+        width: 35%;
+        height: 300px;
+        margin: 10px;
+    }
+    .di_1 {
+        list-style: none;
+        position: relative;
+        top: 100%;
+        background-color: yellowgreen;
+    }
+    .photo_grid {
+        background-color: yellowgreen;
+        display: grid;
+        width: 100%;
+        height: 500px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .grid_item1 {
+        background-color: g;
+        
+    }
+
+
 
 </style>
 <body>
     <div class="laylot">
 
         <!-- 배너 -->
-        <div class="top-banner"></div>
+        <div class="top-banner">
+            <div class="top-banner_pc">첫 구매라면 누구나 2만원 할인받기
+                <button class="top-banner_bt" type="button">닫기</button>
+            </div>
+        </div>
 
         <!-- 메뉴바 -->
         <header class="navigation-bar">
@@ -85,13 +238,13 @@
                     <a class="left1_logo" href="">오늘의 집</a>
                 </div>
                 <div class="navigation-bar_menu">
-                    <a class="menu_item" href="" style="color: lightblue;" >커뮤니티</a>
+                    <a class="menu_item" href="" style="color: lightblue;" > <strong>커뮤니티</strong></a>
                     <a class="menu_item" href="">스토어</a>
                     <a class="menu_item" href="">인테리어 시공</a>
                 </div>
                 <div class="navigation-bar_rigth">
                     <div class="rigth-search">
-                        <input type="text">
+                        <input type="text"><a href="./돋보기.png" title="검색 아이콘"></a>
                         <div class="rigth_icon"></div>
                     </div>
                     <div class="navigation-bar_rigth_shpping">
@@ -100,7 +253,7 @@
                         <a class="rigth_login" href="">고객센터</a>
                     </div>
                     <div class="navigation-bar_rigth_dropdown">
-                        <button class="rigth_dropdown_bt"></button>
+                        <button class="rigth_dropdown_bt">글쓰기</button>
                     </div>
                 </div>
             </div>
@@ -122,12 +275,101 @@
 
         <!-- 메인페이지 -->
         <div class="main-container">
-            <div class="container_header"></div>
-            <nav class="container_menu"></nav>
-            <section class="container_store"></section>
-            <section class="container_category"></section>
-            <section class="container_dill"></section>
-            <section class="container_photo"></section>
+            <div class="container_header">
+                <div class="row">
+                    <div class="row1">
+                        <div class="row_home1"><img src=""></div>
+                    </div>
+                    <div class="row2">
+                        <div class="row_home2"><img src="" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <nav class="container_menu">
+                <ul class="menu_list">
+                    <li>쇼핑하기</li>
+                    <li>빠른배송</li>
+                    <li>집들이</li>
+                    <li>공간</li>
+                    <li>시공</li>
+                    <li>이사</li>
+                    <li>딜</li>
+                    <li>할인</li>
+                    <li>특가</li>
+                    <li>식사</li>
+                </ul>
+            </nav>
+            <section>
+                <h3>오늘의 스토리</h3>
+                    <section class="container_store">
+                        <div class="store_br">
+                            <div class="br1"><img src="" alt=""> 
+                                <ul class="br1_list">
+                                    <li>패션 디자이너의 홈 스튜디오</li>
+                                </ul> 
+                            </div>
+                            <div class="br2"><img src="" alt=""> 
+                                <ul class="br2_list">
+                                    <li>패션 디자이너의 홈 스튜디오</li>
+                                </ul> 
+                            </div>
+                            <div class="br3"><img src="" alt=""> 
+                                <ul class="br3_list">
+                                    <li>패션 디자이너의 홈 스튜디오</li>
+                                </ul> 
+                            </div>
+                        </div>
+                        <div class="store_br2">
+                            <div class="br2_menu1"><a href="">집들이</a></div>
+                            <div class="br2_menu1" ><a href="">전문가 집들이</a></div>
+                            <div class="br2_menu1" ><a href="">노하우</a></div>
+                        </div>
+                    </section>
+            </section>
+            <section class="container_category">
+                <h3>카테고리별 상품 찾기</h3>
+                <ul class="category_list">
+                    <li>가구</li>
+                    <li>패브릭</li>
+                    <li>가전</li>
+                    <li>유아</li>
+                    <li>조명</li>
+                    <li>주방용품</li>
+                </ul>
+            </section>
+            <section class="container_dill">
+                <h3>오늘의 딜</h3>
+                    <div class="dill_list">
+                        <div class="dill_list1"><img src="" alt=""> 
+                            <ul class="di_1">
+                                <li>크리넥스</li>
+                            </ul> 
+                        </div>
+                        <div class="dill_list2"><img src="" alt=""> 
+                            <ul class="di_1">
+                                <li>센스큐</li>
+                            </ul> 
+                        </div>
+                        <div class="dill_list3"><img src="" alt=""> 
+                            <ul class="di_1">
+                                <li>퍼플플라스틱</li>
+                            </ul> 
+                        </div>
+                    </div>
+            </section>
+            <section class="container_photo">
+                <h3>오늘의 인기 사진</h3>
+                    <div class="photo_grid">
+                        <div class="grid_item1">1</div>
+                        <div class="grid_item1">2</div>
+                        <div class="grid_item1">3</div>
+                        <div class="grid_item1">4</div>
+                        <div class="grid_item1">5</div>
+                        <div class="grid_item1">6</div>
+                        <div class="grid_item1">7</div>
+                        <div class="grid_item1">8</div>
+                    </div>
+            </section>
             <section class="container_review"></section>
             <section class="container_Special"></section>
             <section class="container_premium"></section>
