@@ -7,8 +7,8 @@
     <title>ohou</title>
 </head>
 <style>
-    /* max-width: ;  */
-    @media (min-width: 1024px) {
+    
+    /* @media (min-width: 1024px) {
         .navigation-bar_content {
         padding: 10px 60px;
     }
@@ -19,19 +19,16 @@
 
         }
         .navigation-bar_left1 {
-            /* position: static; */
             margin-right: 35px;
             transform: none;
         }
-    }
+    } */
 
-    .laylot {
+    /* .laylot {
         display: flex;
         flex-direction: column;
-        /* flex-wrap: wrap; */
-        /* align-items: stretch; */
     }
-    .laylot > * { outline: 1px dotted #4f80ff; }
+    .laylot > * { outline: 1px dotted #4f80ff; } */
         
     html {
         background-color: #fff;
@@ -48,43 +45,50 @@
     .top-banner_bt {
         float: right;
     }
+    
+    /* 헤더 */
     .navigation-bar {
-        /* justify-content: space-around; */
-        
+        background-color: gray;
+        width: 100%;
+        height: 150px;
     }
-    .navigation-bar_content {
+    .nav_bar {
+        background-color: #ff4f4f;
         display: flex;
-        Position: sticky;
-        justify-content : center 
+        justify-content: space-around;
+        border-bottom: 1px solid;
     }
-    .navigation-bar_rigth {
+    
+    .list_1 {
+        background-color: aqua; 
+    }
+    .list_2 {
+        background-color: yellow;
+        list-style: none;
         display: flex;
-        /* padding: 20px; */
-        position: relative;
+        flex-direction: row;
     }
-    .navigation-bar_rigth_shpping {
-        display: block;
-        /* padding: 20px; */
-        /* position: relative; */
+    .list_3 {
+        background-color: rebeccapurple;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
     }
-    .navigation-bar_rigth_shpping a {
-        text-decoration: none;
+    .nav_bar1 {
+        background-color: yellowgreen;
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid;
     }
-    .left1_logo {
-        padding: 4px;
-        /* cursor: pointer; */
-        text-decoration: none;
-        color:  black;
+    .nb1_list, .nb2_link {
+        background-color: green;
+        list-style: none;
+        display: flex; 
     }
-    .navigation-bar_menu a {
-        text-decoration: none;
+    .list_1, .nl_1, .nb2_link, .list_ms {
+        margin: 10px;
     }
-    .menu_item {
-        color: black;
-        margin: 20px;
-        padding: 10px;
-        font-size: 18px;
-    }
+
     
     /* 메인 컨텐츠 */
     .row {
@@ -122,6 +126,8 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        position: relative;
+        top: 50%;
     }
 
     /* 오늘의 스토리 */
@@ -335,7 +341,7 @@
     }
     
     /* 푸더 */
-    footer {
+    .ft_top {
         background-color: aqua;
         width: 100%;
         height: 200px;
@@ -362,43 +368,41 @@
 
         <!-- 메뉴바 -->
         <header class="navigation-bar">
-            <div class="navigation-bar_content">
-                <div class="navigation-bar_left1">
-                    <a class="left1_logo" href="">오늘의 집</a>
-                </div>
-                <div class="navigation-bar_menu">
-                    <a class="menu_item" href="" style="color: lightblue;" > <strong>커뮤니티</strong></a>
-                    <a class="menu_item" href="">스토어</a>
-                    <a class="menu_item" href="">인테리어 시공</a>
-                </div>
-                <div class="navigation-bar_rigth">
-                    <div class="rigth-search">
-                        <input type="text"><a href="./돋보기.png" title="검색 아이콘"></a>
-                        <div class="rigth_icon"></div>
-                    </div>
-                    <div class="navigation-bar_rigth_shpping">
-                        <a class="rigth_signup" href="">로그인</a>
-                        <a class="rigth_service" href="">회원가입</a>
-                        <a class="rigth_login" href="">고객센터</a>
-                    </div>
-                    <div class="navigation-bar_rigth_dropdown">
-                        <button class="rigth_dropdown_bt">글쓰기</button>
+            <div class="nav_bar">
+                <div class="list_1">
+                    <div class="nb_list">
+                        오늘의집
                     </div>
                 </div>
-            </div>
-            <div class="navigation-seconbar">
-                <div class="seconbar_menu">
-                    <a href="">홈</a>
-                    <a href="">팔로잉</a>
-                    <a href="">사진</a>
-                    <a href="">집들이</a>
-                    <a href="">노하우</a>
-                    <a href="">전문가집들이</a>
-                    <a href="">셀프가이드</a>
-                    <a href="">질문과 답변</a>
-                    <a href="">이번트</a>
-                </div>
-                <div class="seconbar_download"></div>
+                
+                <ul class="list_2">
+                    <li class="list_ms">커뮤니티</li>
+                    <li class="list_ms">스토어</li>
+                    <li class="list_ms">인테리어시공</li>
+                </ul>
+                
+                
+                <ul class="list_3">
+                    <li class="list_ms">로그인</li>
+                    <li class="list_ms">회원가입</li>
+                    <li class="list_ms">글쓰기</li>
+                </ul>
+                
+            </div>    
+            <div class="nav_bar1">
+                <ul class="nb1_list">
+                    <li class="nl_1">홈</li>
+                    <li class="nl_1">팔로잉</li>
+                    <li class="nl_1">사진</li>
+                    <li class="nl_1">집들이</li>
+                    <li class="nl_1">노하우</li>
+                    <li class="nl_1">전문가집들이</li>
+                    <li class="nl_1">셀프가이드</li>
+                    <li class="nl_1">질문과 답변</li>
+                    <li class="nl_1">이벤트</li>
+                </ul>
+               <div class="nb2_link">3D인테리어</div>
+                
             </div>
         </header>
 
@@ -618,8 +622,11 @@
 
         
         <!-- 푸더 -->
-        <footer>고객센터
-            <div class="ft_br">1670-0876</div>
+        <footer>
+            <h3>고객센터</h3>
+            <div class="ft_top">
+                <div class="ft_br">1670-0876</div>
+            </div>
         </footer>
 
     </div>
