@@ -86,6 +86,7 @@
         font-size: 18px;
     }
     
+    /* 메인 컨텐츠 */
     .row {
         display: flex;
         flex-direction: row;
@@ -109,6 +110,8 @@
         float: right;
         
     }
+
+    /* 메뉴 */
     .container_menu {
         width: 100%;
         background-color: #4f80ff;
@@ -120,6 +123,8 @@
         flex-direction: row;
         justify-content: space-between;
     }
+
+    /* 오늘의 스토리 */
     .container_store {
         background-color: palevioletred;
         display: flex;
@@ -156,7 +161,6 @@
     }
     .br2_menu1 {
         background-color: gray;
-        /* display: flex; */
         border-radius: 5px;
         border-bottom: dotted;
         height: 30%;
@@ -169,6 +173,8 @@
         position: relative;
         top: 30%;
     }
+
+    /* 카테고리별 상품 찾기 */
     .category_menu {
         background-color: blue;
         width: 100%;
@@ -184,6 +190,7 @@
         top: 70%;
     }
     
+    /* 오늘의 딜 */
     .dill_list {
         background-color: aquamarine;
         width: 100%;
@@ -203,6 +210,8 @@
         top: 100%;
         background-color: yellowgreen;
     }
+
+    /* 오늘의 인기 사진 */
     .photo_grid {
         background-color: yellowgreen;
         width: 100%;
@@ -257,6 +266,85 @@
         position: relative;
         top: 100%;
     }
+
+    /* 해외 프리미엄 인기상품 */
+    .premium_list {
+        background-color: #4f80ff;
+        width: 100%;
+        height: 300px;
+        display: flex;
+    }
+    .premium_list1, .premium_list2, .premium_list3, .premium_list4 {
+        background-color: aqua;
+        width: 35%;
+        height: 200px;
+        margin: 10px;
+    }
+    .pl_1 {
+        background-color: yellow;
+        list-style: none;
+        position: relative;
+        top: 100%;
+    }
+
+    /* 베스트 */
+    .best_top {
+        background-color: green;
+        width: 100%;
+        height: 300px;
+    }
+    .best_list {
+        background-color: gray;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }
+    .best_br_list2 {
+        background-color: red;
+        height: 250px;
+        display: flex;
+    }
+    .best_br1, .best_br2, .best_br3, .best_br4 {
+        background-color: #4f80ff;
+        width: 35%;
+        height:200px;
+        margin: 10px;
+    }
+    .bb_1 {
+        background-color: yellow;
+        list-style: none;
+        position: relative;
+        top: 100%;
+    }
+
+    /* 메인 하단 */
+    .container_notice {
+        background-color: #4f80ff;
+        width: 100%;
+        height: 100px;
+        margin-top: 20px;
+        display: flex;
+    }
+    .notice_open, .notice_buy {
+        background-color: gold;
+        width: 50%;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+    }
+    
+    /* 푸더 */
+    footer {
+        background-color: aqua;
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+    }
+    .ft_br {
+        background-color: #4f80ff;
+    }
+
 
    
 
@@ -316,6 +404,7 @@
 
         <!-- 메인페이지 -->
         <div class="main-container">
+
             <div class="container_header">
                 <div class="row">
                     <div class="row1">
@@ -483,13 +572,55 @@
                     </div>
                 </div>
             </section>
-            <section class="container_best"></section>
-            <section class="container_notice"></section>
+
+            <section class="container_best">
+                <h3>베스트</h3>
+                <div class="best_top">
+                    <ul class="best_list">
+                        <li>전체</li>
+                        <li>가구</li>
+                        <li>패브릭</li>
+                        <li>조명</li>
+                        <li>가전</li>
+                        <li>주방용품</li>
+                        <li>데코</li>
+                        <li>수납</li>
+                        <li>생활용품</li>
+                        <li>생필품</li>
+                        <li>공구</li>
+                    </ul>
+                    
+                    <div class="best_br_list2">
+                        <div class="best_br1">
+                            <ul class="bb_1">
+                                <li>2,298,000</li>
+                            </ul>
+                        </div>
+                        <div class="best_br2">
+                            <ul class="bb_1">
+                                <li>2,298,000</li>
+                            </ul>
+                        </div>
+                        <div class="best_br3">
+                            <ul class="bb_1">
+                                <li>2,298,000</li>
+                            </ul>
+                        </div>
+                        <div class="best_br4">베스트 셀러 더보기</div>
+                    </div>
+                </div>
+            </section>
+            <section class="container_notice">
+                <div class="notice_open">전문가 가입신청</div>
+                <div class="notice_buy">사업자 구매 회원전환</div>
+            </section>
         </div>
 
         
         <!-- 푸더 -->
-        <footer>footer</footer>
+        <footer>고객센터
+            <div class="ft_br">1670-0876</div>
+        </footer>
 
     </div>
 </body>
