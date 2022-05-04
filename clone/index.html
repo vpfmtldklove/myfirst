@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anybody&family=Gamja+Flower&family=Nanum+Pen+Script&family=Secular+One&family=Song+Myung&display=swap" rel="stylesheet">
     <title>ohou</title>
 </head>
 <style>
@@ -24,16 +27,19 @@
         }
     } */
 
-    /* .laylot {
+    .laylot {
         display: flex;
         flex-direction: column;
+        font-family: 'Gamja Flower', cursive;
     }
-    .laylot > * { outline: 1px dotted #4f80ff; } */
+    .laylot > * { outline: 1px dotted #4f80ff; }
         
+    
     html {
         background-color: #fff;
     }
 
+    /* 배너 */
     .top-banner {
         background-color: #4f80ff;
     }
@@ -42,51 +48,67 @@
         text-align: center;
         padding: 20px;
     }
+    .top-banner_pc a {
+        text-decoration: none;
+        color: white;
+    }
     .top-banner_bt {
         float: right;
+        background-color: white;
     }
+    .bn_img {
+        width: 100%;
+        height: 20px;
+    }
+    
     
     /* 헤더 */
     .navigation-bar {
-        background-color: gray;
         width: 100%;
         height: 150px;
     }
     .nav_bar {
-        background-color: #ff4f4f;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         border-bottom: 1px solid;
     }
     
     .list_1 {
-        background-color: aqua; 
+        font-size: 40px;
+        position: relative;
+        top: 10px;
+        left: 2%;
     }
     .list_2 {
-        background-color: yellow;
         list-style: none;
         display: flex;
         flex-direction: row;
     }
     .list_3 {
-        background-color: rebeccapurple;
         list-style: none;
         display: flex;
         flex-direction: row;
     }
+    .list3_bt {
+        background-color: #4f80ff;
+    }
     .nav_bar1 {
-        background-color: yellowgreen;
+        /* background-color: yellowgreen; */
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         border-bottom: 1px solid;
     }
     .nb1_list, .nb2_link {
-        background-color: green;
+        /* background-color: green; */
         list-style: none;
         display: flex; 
     }
     .list_1, .nl_1, .nb2_link, .list_ms {
         margin: 10px;
+    }
+    .nb2_link {
+        position: relative;
+        top: 10px;
     }
 
     
@@ -361,8 +383,11 @@
 
         <!-- 배너 -->
         <div class="top-banner">
-            <div class="top-banner_pc">첫 구매라면 누구나 2만원 할인받기
-                <button class="top-banner_bt" type="button">닫기</button>
+            <div class="top-banner_pc">
+                <a href="https://ohou.se/exhibitions/2031" target="blank">첫 구매라면 누구나 2만원 할인받기</a> 
+                <button class="top-banner_bt" type="button">
+                    <img class="bn_img" src="./x.png">
+                </button>
             </div>
         </div>
 
@@ -385,7 +410,9 @@
                 <ul class="list_3">
                     <li class="list_ms">로그인</li>
                     <li class="list_ms">회원가입</li>
-                    <li class="list_ms">글쓰기</li>
+                    <li class="list_ms">
+                        <button class="list3_bt">글쓰기</button>
+                    </li>
                 </ul>
                 
             </div>    
