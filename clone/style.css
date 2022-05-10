@@ -595,10 +595,16 @@
     /* 베스트 */
     .best_list {
         /* background-color: gray; */
-        /* list-style: none; */
-        display: flex;
+        /* display: flex; */
         justify-content: space-around;
+        overflow-y: hidden;
+        white-space: nowrap;
     }
+
+    .best_list span {
+        padding: 20px;
+    }
+    
     .best_list2 {
         /* background-color: red; */
         height: 300px;
@@ -617,12 +623,18 @@
         height: 100%;
         border-radius: 5px;
     }
-    .best_br1 img:hover, .best_br2 img:hover, .best_br3 img:hover, .best_br4 icon:hover {
+    .best_br1 img:hover, .best_br2 img:hover, .best_br3 img:hover {
         transform: scale(1.2);
         border-radius: 5px;
     }
     .best_br4 {
         background-color:  #f5f5f5;
+        text-align: center;
+
+    }
+    best_br4 div {
+        position: relative;
+        bottom: 50px;
     }
     .bb_1 {
         /* background-color: yellow; */
@@ -663,7 +675,7 @@
         height: 80px;
         margin: 10px;
         border-radius: 5px;
-        font-size: 25px;
+        font-size: 20px;
         text-align: center;
     }
     .notice_1, .notice_2 {
