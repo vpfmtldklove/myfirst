@@ -52,16 +52,7 @@
         color: white;
         float: right;
     }
-    
-    /* .top-banner_bt {
-        float: right;
-        background-color: white;
-    }
-    .bn_img {
-        width: 100%;
-        height: 20px;
-    } */
-    
+
     
     /* 헤더 */
     .navigation-bar {
@@ -151,10 +142,6 @@
         width: 800px;
         margin: 10px auto;
         float: left;
-        /* background-image: url('alexandra-gorn-JIUjvqe2ZHg-unsplash.jpg');
-        background-repeat: no-repeat;
-        background-size: contain; */
-        /* position: relative; */
         border-radius: 5px;
         overflow: hidden;
         
@@ -165,9 +152,7 @@
         width: 100%;
         height: 100%;
     }
-    /* .row1 img:hover {
-        transform: scale(1.4);
-    } */
+    
     .row2 {
         background-color: chocolate;
         width: 250px;
@@ -249,7 +234,6 @@
         display: flex;
         flex-direction: row;
         position: relative;
-        overflow: hidden;
     }
     .store_br2 {
         width: 20%;
@@ -263,6 +247,8 @@
         width: 35%;
         height: 150px;
         margin: 10px;
+        overflow: hidden;
+        overflow-y: visible;
     }
     .br1 img:hover, .br2 img:hover, .br3 img:hover {
         transform: scale(1.4);
@@ -365,8 +351,41 @@
     }
     
     /* 오늘의 딜 */
-    
-    .dill_list {
+
+    .dill_grid {
+        /* background-color: yellowgreen; */
+        width: 100%;
+        height: 350px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /* gap: 10px; */
+    }
+    .dill_item1 {
+        /* background-color: gray; */
+        border-radius: 10px;
+        margin: 5px;
+        height: 250px;
+        /* overflow: hidden; */
+    }
+    .dill_item1 img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    .dill_item1 img:hover {
+        transform: scale(1.4);
+        border-radius: 5px;
+    }
+    .dill_br1_1 {
+        /* background-color: yellow; */
+        display: inline-block;
+        position: relative;
+        left: 30px;
+        bottom: 0px;
+        color: black;
+        font-size: 17px;
+    }
+    /* .dill_list {
         background-color: aquamarine;
         width: 100%;
         height: 400px;
@@ -378,149 +397,306 @@
         width: 35%;
         height: 300px;
         margin: 10px;
+        overflow: hidden;
+    }
+    .dill_list1 img, .dill_list2 img, .dill_list3 img, .dill_list4 img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    .dill_list1 img:hover, .dill_list2 img:hover, .dill_list3 img:hover, .dill_list4 img:hover {
+        transform: scale(1.4);
+        border-radius: 5px;
     }
     
     .di_1 {
-        list-style: none;
         position: relative;
-        top: 100%;
+        top: 10%;
         background-color: yellowgreen;
-    }
+        z-index: 10;
+    } */
 
     /* 오늘의 인기 사진 */
     .photo_grid {
-        background-color: yellowgreen;
+        /* background-color: yellowgreen; */
         width: 100%;
-        height: 500px;
+        height: 530px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 10px;
-        
+        /* gap: 10px; */
     }
     .grid_item1 {
-        background-color: gray;
+        /* background-color: gray; */
         border-radius: 10px;
         margin: 5px;
+        height: 250px;
+        overflow: hidden;
+    }
+    .grid_item1 img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    .grid_item1 img:hover {
+        transform: scale(1.4);
+        border-radius: 5px;
+    }
+    
+    .grid_br1 {
+        /* background-color: darkgreen; */
+        float: left;
+        border: 1px solid black;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        bottom: 50px;
+        left: 20px;
+    }
+    .grid_br1_1 {
+        display: inline-block;
+        position: relative;
+        left: 30px;
+        bottom: 50px;
+        color: white;
+        font-size: 17px;
+        font-weight: bold;
     }
 
+    
     /* 유저들의 인테리어 시공리뷰 */
     .review_list {
-        background-color: #4f80ff;
+        /* background-color: #4f80ff; */
         width: 100%;
         height: 300px;
         display: flex;
+        /* flex-wrap: wrap; */
     }
     .review_list1, .review_list2, .review_list3 {
-        background-color: aqua;
+        /* background-color: aqua; */
         width: 35%;
         height: 200px;
         margin: 10px;
+        overflow: hidden;
     }
-    .rl_1 {
-        background-color: yellow;
+    .review_list1 img, .review_list2 img, .review_list3 img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    .review_list1 img:hover, .review_list2 img:hover, .review_list3 img:hover {
+        transform: scale(1.4);
+        border-radius: 5px;
+    }
+    .rl_container {
+        /* background-color: red; */
+        height: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .rl_1, .rl_2, .rl_3  {
         list-style: none;
+        /* background-color: yellow; */
         position: relative;
-        top: 100%;
+        bottom: 80px;
     }
+    
 
     /* 오늘의 기획전 */
+    .special_ht {
+        /* background-color: brown; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .ht_menu {
+        color:lightskyblue
+    }
     .special_list {
-        background-color: #4f80ff;
+        /* background-color: #4f80ff; */
         width: 100%;
         height: 300px;
         display: flex;
     }
     .special_list1, .special_list2, .special_list3 {
-        background-color: aqua;
+        /* background-color: aqua; */
         width: 35%;
         height: 200px;
         margin: 10px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .special_list1 img, .special_list2 img, .special_list3 img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    .special_list1 img:hover, .special_list2 img:hover, .special_list3 img:hover {
+        transform: scale(1.4);
+        border-radius: 5px;
     }
     .sl_1 {
-        background-color: yellow;
-        list-style: none;
+        /* background-color: yellow; */
+        display: flex;
+        flex-direction: row;
         position: relative;
-        top: 100%;
+        bottom: 80px;
+        justify-content: space-around;
+        
     }
 
     /* 해외 프리미엄 인기상품 */
+    .premium_ht {
+        /* background-color: brown; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .premium_menu {
+        color:lightskyblue
+    }
+
     .premium_list {
-        background-color: #4f80ff;
+        /* background-color: #4f80ff; */
         width: 100%;
         height: 300px;
         display: flex;
     }
     .premium_list1, .premium_list2, .premium_list3, .premium_list4 {
-        background-color: aqua;
+        /* background-color: aqua; */
         width: 35%;
         height: 200px;
         margin: 10px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .premium_list1 img, .premium_list2 img, .premium_list3 img, .premium_list4 img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    .premium_list1 img:hover, .premium_list2 img:hover, .premium_list3 img:hover, .premium_list4 img:hover {
+        transform: scale(1.4);
+        border-radius: 5px;
     }
     .pl_1 {
-        background-color: yellow;
-        list-style: none;
+        /* background-color: yellow; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
         position: relative;
-        top: 100%;
+        bottom: 80px;
     }
 
     /* 베스트 */
-    .best_top {
-        background-color: green;
-        width: 100%;
-        height: 300px;
-    }
     .best_list {
-        background-color: gray;
-        list-style: none;
+        /* background-color: gray; */
+        /* list-style: none; */
         display: flex;
         justify-content: space-around;
     }
-    .best_br_list2 {
-        background-color: red;
-        height: 250px;
+    .best_list2 {
+        /* background-color: red; */
+        height: 300px;
         display: flex;
     }
     .best_br1, .best_br2, .best_br3, .best_br4 {
-        background-color: #4f80ff;
+        /* background-color: #4f80ff; */
         width: 35%;
         height:200px;
         margin: 10px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .best_br1 img, .best_br2 img, .best_br3 img, .best_br4 img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    .best_br1 img:hover, .best_br2 img:hover, .best_br3 img:hover, .best_br4 icon:hover {
+        transform: scale(1.2);
+        border-radius: 5px;
+    }
+    .best_br4 {
+        background-color:  #f5f5f5;
     }
     .bb_1 {
-        background-color: yellow;
-        list-style: none;
-        position: relative;
-        top: 100%;
+        /* background-color: yellow; */
+        height: 0;
+        display: flex;
+        flex-direction: row;
     }
+    .bb1_1{
+        position: relative;
+        bottom: 80px;
+        left: 20px;
+    }
+    .bb1_2 {
+        position: relative;
+        bottom: 80px;
+        left: 250px;
+    }
+    .bb1_3 {
+        position: relative;
+        bottom: 80px;
+        left: 490px;
+    }
+
+
 
     /* 메인 하단 */
     .container_notice {
-        background-color: #4f80ff;
+        /* background-color: #4f80ff; */
         width: 100%;
         height: 100px;
         margin-top: 20px;
         display: flex;
+        flex-direction: row;
     }
     .notice_open, .notice_buy {
-        background-color: gold;
+        background-color: #f5f5f5;
         width: 50%;
         height: 80px;
-        display: flex;
-        flex-direction: row;
         margin: 10px;
+        border-radius: 5px;
+        font-size: 25px;
+        text-align: center;
+    }
+    .notice_1, .notice_2 {
+        position: relative;
+        top: 20px;
     }
     
     /* 푸더 */
     .ft_top {
-        background-color: aqua;
+        background-color: #f5f5f5;
         width: 100%;
         height: 200px;
         margin-top: 20px;
     }
-    .ft_br {
-        background-color: #4f80ff;
+    .ft_bt {
+        margin: 0 auto;
+        /* background-color: red; */
+        width: 1100px;
     }
-
+    .nember {
+        font-size: 35px;
+        font-weight: bold;
+    }
+    .ft_nember {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .ft_nember i {
+        margin: 10px;
+        font-size: 25px;
+    }
+    
 
    
 
